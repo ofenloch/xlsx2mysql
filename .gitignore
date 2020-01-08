@@ -1,0 +1,12 @@
+# ignore directory target/
+target/
+
+.classpath
+.factorypath
+.project
+.settings/
+
+/*.xlsx
+/*.xls
+/*.sql
+*.log
