@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "xlsx test formatted with formulae",
+            "request": "launch",
+            "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "args": "./data/formatted-test-with-formulae.xlsx",
+            "projectName": "xls2mysql"
+        },
+        {
+            "type": "java",
+            "name": "xlsx test random",
+            "request": "launch",
+            "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "args": "./data/random.xlsx",
+            "projectName": "xls2mysql"
+        },
+        {
+            "type": "java",
+            "name": "xls test random",
+            "request": "launch",
+            "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "args": "./data/random.xls",
+            "projectName": "xls2mysql"
+        },
+        {
+            "type": "java",
+            "name": "create test xlsx workbook",
+            "request": "launch",
+            "mainClass": "de.ofenloch.util.TestFileGenerator",
+            "args": "random.xlsx 7 2000 55",
+            "projectName": "xls2mysql"
+        },
+        {
+            "type": "java",
+            "name": "create test xls workbook",
+            "request": "launch",
+            "mainClass": "de.ofenloch.util.TestFileGenerator",
+            "args": "random.xls 7 2000 55",
+            "projectName": "xls2mysql"
+        },
+        {
+            "type": "java",
+            "name": "RandomString",
+            "request": "launch",
+            "mainClass": "de.ofenloch.util.RandomString",
+            "projectName": "xls2mysql"
+        },
+        {
+            "type": "java",
+            "name": "create 2019-11-19",
+            "request": "launch",
+            "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "args": "-i 2019-11-19-ETM_Germany_20191119.xlsx --output 2019-11-19-ETM_Germany_20191119.xlsx.sql --sheet 0 4 6",
+            "projectName": "xls2mysql"
+        },
+        {
+            "type": "java",
+            "name": "create 2019-11-05",
+            "request": "launch",
+            "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "args": "--input 2019-11-05-ETM_DE_42033_Wiegand_20191105.xlsx -o 2019-11-05-ETM_DE_42033_Wiegand_20191105.xlsx.sql -s 0 4 6",
+            "projectName": "xls2mysql"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RandomString<xlsx2mysql>",
+            "request": "launch",
+            "mainClass": "de.ofenloch.util.RandomString",
+            "projectName": "xlsx2mysql"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-XlsxTestFileGenerator<xlsx2mysql>",
+            "request": "launch",
+            "mainClass": "de.ofenloch.util.XlsxTestFileGenerator",
+            "projectName": "xlsx2mysql"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-App<xlsx2mysql>",
+            "request": "launch",
+            "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "projectName": "xlsx2mysql"
+        }
+    ]
+}
