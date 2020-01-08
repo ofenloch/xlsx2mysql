@@ -1,23 +1,23 @@
 #!/bin/bash
 
-DOCXFILE=${1}
-# DOCXDIR=`basename ${DOCXFILE} .xlsx`
-DOCXDIR=`basename ${DOCXFILE}`
-DOCXDIR="${DOCXDIR}.unpacked"
+OOXMLFILE=${1}
+# OOXMLDIR=`basename ${OOXMLFILE} .xlsx`
+OOXMLDIR=`basename ${OOXMLFILE}`
+OOXMLDIR="${OOXMLDIR}.unpacked"
 
-echo "unpacking file ${DOCXFILE} into directory ${DOCXDIR} ..."
+echo "unpacking file ${OOXMLFILE} into directory ${OOXMLDIR} ..."
 
-/bin/rm -rf ${DOCXDIR}
-/bin/mkdir -p ${DOCXDIR}
+/bin/rm -rf ${OOXMLDIR}
+/bin/mkdir -p ${OOXMLDIR}
 
-/usr/bin/unzip -o ${DOCXFILE} -d ${DOCXDIR}
+/usr/bin/unzip -o ${OOXMLFILE} -d ${OOXMLDIR}
 
-for f in `find ./${DOCXDIR} -name "*.xml"` ; do
+for f in `find ./${OOXMLDIR} -name "*.xml"` ; do
   echo "formatting file $f ..."
   /usr/bin/tidy -quiet -xml -indent -wrap 60 -modify $f
 done
 
-for f in `find ./${DOCXDIR} -name "*.rels"` ; do
+for f in `find ./${OOXMLDIR} -name "*.rels"` ; do
   echo "formatting file $f ..."
   /usr/bin/tidy -quiet -xml -indent -wrap 60 -modify $f
 done
