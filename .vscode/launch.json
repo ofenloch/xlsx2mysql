@@ -9,24 +9,16 @@
             "name": "xlsx test formatted with formulae",
             "request": "launch",
             "mainClass": "de.ofenloch.xlsx2mysql.App",
-            "args": "./data/formatted-test-with-formulae.xlsx",
-            "projectName": "xls2mysql"
-        },
-        {
-            "type": "java",
-            "name": "xlsx test random",
-            "request": "launch",
-            "mainClass": "de.ofenloch.xlsx2mysql.App",
-            "args": "./data/random.xlsx",
-            "projectName": "xls2mysql"
+            "args": "-i ./data/formatted-test-with-formulae.xlsx -o formatted-test-with-formulae.xlsx.sql -s 2 0 0",
+            "projectName": "xlsx2mysql"
         },
         {
             "type": "java",
             "name": "xls test random",
             "request": "launch",
             "mainClass": "de.ofenloch.xlsx2mysql.App",
-            "args": "./data/random.xls",
-            "projectName": "xls2mysql"
+            "args": "-i ./data/random.xls -o random.xls.sql -s 0 0 0",
+            "projectName": "xlsx2mysql"
         },
         {
             "type": "java",
@@ -34,7 +26,7 @@
             "request": "launch",
             "mainClass": "de.ofenloch.util.TestFileGenerator",
             "args": "random.xlsx 7 2000 55",
-            "projectName": "xls2mysql"
+            "projectName": "xlsx2mysql"
         },
         {
             "type": "java",
@@ -42,14 +34,14 @@
             "request": "launch",
             "mainClass": "de.ofenloch.util.TestFileGenerator",
             "args": "random.xls 7 2000 55",
-            "projectName": "xls2mysql"
+            "projectName": "xlsx2mysql"
         },
         {
             "type": "java",
             "name": "RandomString",
             "request": "launch",
             "mainClass": "de.ofenloch.util.RandomString",
-            "projectName": "xls2mysql"
+            "projectName": "xlsx2mysql"
         },
         {
             "type": "java",
@@ -57,7 +49,7 @@
             "request": "launch",
             "mainClass": "de.ofenloch.xlsx2mysql.App",
             "args": "-i 2019-11-19-ETM_Germany_20191119.xlsx --output 2019-11-19-ETM_Germany_20191119.xlsx.sql --sheet 0 4 6",
-            "projectName": "xls2mysql"
+            "projectName": "xlsx2mysql"
         },
         {
             "type": "java",
@@ -65,7 +57,7 @@
             "request": "launch",
             "mainClass": "de.ofenloch.xlsx2mysql.App",
             "args": "--input 2019-11-05-ETM_DE_42033_Wiegand_20191105.xlsx -o 2019-11-05-ETM_DE_42033_Wiegand_20191105.xlsx.sql -s 0 4 6",
-            "projectName": "xls2mysql"
+            "projectName": "xlsx2mysql"
         },
         {
             "type": "java",
