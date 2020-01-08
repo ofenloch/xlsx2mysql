@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="info" strict="true" name="xlsx2mysql" packages="org.apache.logging.log4j.test">
+
+    <Properties>
+        <Property name="filename">xlsx2mysql.log</Property>
+    </Properties>
+
+    <Appenders>
+        <Appender type="Console" name="STDOUT">
+            <Layout type="PatternLayout" pattern="%m MDC%X%n" />
+            <Filters>
+                <Filter type="MarkerFilter" marker="FLOW" onMatch="DENY" onMismatch="NEUTRAL" />
+                <Filter type="MarkerFilter" marker="EXCEPTION" onMatch="DENY" onMismatch="ACCEPT" />
+            </Filters>
+        </Appender>
+        <Appender type="Console" name="FLOW">
+            <Layout type="PatternLayout" pattern="%C{1}.%M %m %ex%n" /> <!-- class and line number -->
+            <Filters>
+                <Filter type="MarkerFilter" marker="FLOW" onMatch="ACCEPT" onMismatch="NEUTRAL" />
+                <Filter type="MarkerFilter" marker="EXCEPTION" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+        </Appender>
+        <RollingFile name="RollingFile" fileName="${filename}" filePattern="${filename}-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="File" />
+        </Root>
+        <Logger name="de.ofenloch.xlsx2mysql" level="debug" additivity="false">
+            <AppenderRef ref="File" />
+        </Logger>
+        <Logger name="de.ofenloch.xlsx2mysql.xlsx2mysql" level="debug" additivity="false">
+            <AppenderRef ref="File" />
+        </Logger>
+        <Logger name="de.ofenloch.util.XlsxTestFileGenerator" level="debug" additivity="false">
+            <AppenderRef ref="File" />
+        </Logger>
+    </Loggers>
+
+</Configuration>
