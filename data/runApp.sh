@@ -1,6 +1,6 @@
 #!/bin/bash
 
-JARFILE="./target/xls2mysql-1.1-SNAPSHOT.jar"
+JARFILE="./target/xlsx2mysql-1.1-SNAPSHOT.jar"
 MAINCLASS="de.ofenloch.xlsx2mysql.App"
 DEPENDENCIES="./target/dependency"
 

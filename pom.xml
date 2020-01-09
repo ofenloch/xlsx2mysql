@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.ofenloch.xlsx2mysql</groupId>
-  <artifactId>xls2mysql</artifactId>
+  <artifactId>xlsx2mysql</artifactId>
   <packaging>jar</packaging>
   <version>1.1-SNAPSHOT</version>
   <name>xlsx2mysql</name>
