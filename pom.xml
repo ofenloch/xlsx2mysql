@@ -6,13 +6,13 @@
   <packaging>jar</packaging>
   <version>1.1-SNAPSHOT</version>
   <name>xlsx2mysql</name>
+  <url>http://www.phys-ing.de</url>
   <properties>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <poi.version>4.1.1</poi.version>
   </properties>
-  <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
