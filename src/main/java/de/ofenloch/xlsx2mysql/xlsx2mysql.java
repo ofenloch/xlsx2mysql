@@ -368,7 +368,7 @@ public class xlsx2mysql {
   }
 
   /**
-   * 
+   *
    * @param originalName
    * @return
    */
@@ -512,11 +512,11 @@ public class xlsx2mysql {
       // some "weird" characters. So we put it only as comment into the script.
       stringBuilder.append("/* COMMENT ` ExcelName \'" + column.getExcelName() + "\' , ExcelType ");
       stringBuilder.append(column.getExcelTypeName() + " ExcelColumnIndex " + column.getExcelIndex() + " ` */");
-      stringBuilder.append(", \n");
+      stringBuilder.append(",\n");
     }
     String statement = stringBuilder.toString();
     // remove the \n and the last comma to avoid MySQL errors
-    statement = statement.substring(0, statement.length() - 3);
+    statement = statement.substring(0, statement.length() - 2);
     statement += "\n);\n";
     log.debug(
         "generateSqlCreateTableStatement: done generating CREATE TABLE statement for table " + sheetIndex + " ...");
@@ -658,9 +658,9 @@ public class xlsx2mysql {
 
   /**
    * calculate for an Excel column name the column number
-   * 
+   *
    * e.g. A -> 1, Z -> 26, AA -> 27, ..., AAA -> 703, ....
-   * 
+   *
    * @param s the column's Excel name (e.g. "AT")
    * @return the column's number (1-based, not the index)
    */
@@ -674,9 +674,9 @@ public class xlsx2mysql {
 
   /**
    * generate an Excel colum name from the given column number
-   * 
+   *
    * e.g. 1 -> A, 25 -> Y, 27 -> AA, ..., 703 -> AAA, ...
-   * 
+   *
    * @param n the column number
    * @return the Excel column name to the given number
    */
