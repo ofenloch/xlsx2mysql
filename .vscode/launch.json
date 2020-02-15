@@ -53,14 +53,6 @@
         },
         {
             "type": "java",
-            "name": "create 2019-11-05",
-            "request": "launch",
-            "mainClass": "de.ofenloch.xlsx2mysql.App",
-            "args": "--input 2019-11-05-ETM_DE_42033_Wiegand_20191105.xlsx -o 2019-11-05-ETM_DE_42033_Wiegand_20191105.xlsx.sql -s 0 4 6",
-            "projectName": "xlsx2mysql"
-        },
-        {
-            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -84,6 +76,22 @@
             "name": "Debug (Launch)-App<xlsx2mysql>",
             "request": "launch",
             "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "projectName": "xlsx2mysql"
+        },
+        {
+            "type": "java",
+            "name": "create 2019-11-05",
+            "request": "launch",
+            "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "args": "--input 2019-11-05-ETM_DE_42033_Wiegand_20191105.xlsx -o 2019-11-05-ETM_DE_42033_Wiegand_20191105.xlsx.sql -s 0 4 6",
+            "projectName": "xlsx2mysql"
+        },
+        {
+            "type": "java",
+            "name": "create 2020-01-30",
+            "request": "launch",
+            "mainClass": "de.ofenloch.xlsx2mysql.App",
+            "args": "--input 2020-01-30-CREATE-Transfermatrix.xlsx -o 2020-01-30-CREATE-Transfermatrix.xlsx.sql -s 0 4 7",
             "projectName": "xlsx2mysql"
         }
     ]
