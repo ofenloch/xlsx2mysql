@@ -10,3 +10,8 @@ target/
 /*.xls
 /*.sql
 *.log
+
+# Make sure to ignore sensitive data!
+# Putting files to ignore list avoids accidental commits:
+2019-*
+2020-*
